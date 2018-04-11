@@ -1,8 +1,23 @@
-.click-item {
-  max-width: 175px;
-  max-height: 175px;
+.card {
+  background: #fff;
+  border-radius: 2px;
+  height: 225px;
+  margin: 2rem;
+  position: relative;
+  width: 225px;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  text-align: left;
 }
 
-.body {
-  padding: 5px;
+.card > .card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  overflow: hidden;
+  text-align: center;
 }
+
+/* .click-item {
+  width: 175px;
+  height: 175px;
+} */

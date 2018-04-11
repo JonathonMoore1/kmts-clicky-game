@@ -1,13 +1,13 @@
 import React from "react";
-import "./ClickImage.css"
+import "./ClickImage.css";
+// import Score from '../Score';
 
-const ClickImage = props => {
+const ClickImage = (props) => {
+  console.log(props);
   return (
-    // <main>
-      <div className="card click-item" id={props.id}>
-        <img className="card-img" src={props.url} alt={props.url} />
-      </div>
-   
+    <div className="card click-item">
+      <img className="card-img" id={props.id} src={props.src} alt={props.url} />
+    </div>
   );
 }
 

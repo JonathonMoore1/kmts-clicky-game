@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "url": "../img/Karl_Mark.jpg"
+    "url": "../img/Karl_Marx.jpg"
   },
   {
     "id": 2,
@@ -41,7 +41,7 @@
   },
   {
     "id": 11,
-    "url": "../img/Tiger_Shark_Obamaized.jpg"
+    "url": "../img/Tiger_Shark_Obamaized.gif"
   },
   {
     "id": 12,
@@ -57,7 +57,7 @@
   },
   {
     "id": 15,
-    "url": "../img/Tiger_Shark_USA.jpg"
+    "url": "../img/Tiger_Shark_USA.png"
   },
   {
     "id": 16,
@@ -70,5 +70,9 @@
   {
     "id": 18,
     "url": "../img/Marx_beauty.jpg"
+  },
+  {
+    "id": 19,
+    "url": "../img/Marx_nightvision.jpg"
   }
 ]

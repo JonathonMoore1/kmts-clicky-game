@@ -1,15 +1,39 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Score.css';
 
-const Score = () => {
-  let score = 0;
-  let topScore = 0;
+class Score extends Component {
+  
+  state = {
+    scores: [
+      { score: 0 },
+      { topScore: 0 }
+    ]
+  }
+    
+  
 
-  return (
-    <div>
-      <p>Score: {score} | Top Score: {topScore} </p>
-    </div>
-  );
+  updateScore = (props) => {
+    const newState = this.state.scores.map((bothScores) => {
+      const newScore = bothScores;
+      newScore.score++;
+      newScore.topScore++;
+      return newScore;
+    });
+    this.setState({
+      newState
+    })
+  }
+
+  render() {
+    return (
+      <div>
+        <p>Score: {this.state.scores[0].score} | Top Score: {this.state.scores[1].topScore} </p>
+      
+      <br/>
+      <button onClick={this.updateScore}>TEST SCORE</button>
+      </div>
+    );
+  }
 }
 
 export default Score;
