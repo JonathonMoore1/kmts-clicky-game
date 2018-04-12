@@ -14,11 +14,12 @@ class Score extends Component {
     const newState = this.state.scores.map((bothScores) => {
       const newScore = bothScores;
       
-      if ((newScore.score <= newScore.topScore) || (newScore.score === newScore.topScore)){
-        newScore.score++;
+      if (newScore.score > newScore.topScore) {
+        // newScore.score++;
         newScore.topScore++;
       } else {
         newScore.score++;
+        newScore.topScore++;
       }
       return newScore;
     });
