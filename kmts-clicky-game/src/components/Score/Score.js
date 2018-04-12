@@ -10,13 +10,27 @@ class Score extends Component {
     ]
   }
     
-  
-
   updateScore = (props) => {
     const newState = this.state.scores.map((bothScores) => {
       const newScore = bothScores;
-      newScore.score++;
-      newScore.topScore++;
+      
+      if ((newScore.score <= newScore.topScore) || (newScore.score === newScore.topScore)){
+        newScore.score++;
+        newScore.topScore++;
+      } else {
+        newScore.score++;
+      }
+      return newScore;
+    });
+    this.setState({
+      newState
+    })
+  }
+
+  resetScore = (props) => {
+    const newState = this.state.scores.map((bothScores) => {
+      const newScore = bothScores;
+      newScore.score = 0;
       return newScore;
     });
     this.setState({
@@ -31,6 +45,7 @@ class Score extends Component {
       
       <br/>
       <button onClick={this.updateScore}>TEST SCORE</button>
+      <button onClick={this.resetScore}>TEST RESET</button>
       </div>
     );
   }
