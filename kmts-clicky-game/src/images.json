@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "url": "./assets/img/Karl_Marx.jpg",
+    "clicked": false
+  },
+  {
+    "id": 2,
+    "url": "./assets/img/Marx_blue.gif",
+    "clicked": false
+  },
+  {
+    "id": 3,
+    "url": "./assets/img/Marx_green.gif",
+    "clicked": false
+  },
+  {
+    "id": 4,
+    "url": "./assets/img/Marx_purple.gif",
+    "clicked": false
+  },
+  {
+    "id": 5,
+    "url": "./assets/img/Marx_retro.gif",
+    "clicked": false
+  },
+  {
+    "id": 6,
+    "url": "./assets/img/Marx_negative.gif",
+    "clicked": false
+  },
+  {
+    "id": 7,
+    "url": "./assets/img/Marx_pink.gif",
+    "clicked": false
+  },
+  {
+    "id": 8,
+    "url": "./assets/img/Tiger_Shark_cartoon.jpg",
+    "clicked": false
+  },
+  {
+    "id": 9,
+    "url": "./assets/img/Tiger_Shark_film.jpg",
+    "clicked": false
+  },
+  {
+    "id": 10,
+    "url": "./assets/img/Tiger_Shark_fire.jpg",
+    "clicked": false
+  },
+  {
+    "id": 11,
+    "url": "./assets/img/Tiger_Shark_Obamaized.gif",
+    "clicked": false
+  },
+  {
+    "id": 12,
+    "url": "./assets/img/Tiger_Shark_purple.gif",
+    "clicked": false
+  },
+  {
+    "id": 13,
+    "url": "./assets/img/Tiger_Shark_smoke.jpg",
+    "clicked": false
+  },
+  {
+    "id": 14,
+    "url": "./assets/img/Tiger_Shark_space.jpg",
+    "clicked": false
+  },
+  {
+    "id": 15,
+    "url": "./assets/img/Tiger_Shark_USA.png",
+    "clicked": false
+  },
+  {
+    "id": 16,
+    "url": "./assets/img/Tiger_Shark_VanGogh.jpg",
+    "clicked": false
+  },
+  {
+    "id": 17,
+    "url": "./assets/img/Tiger_Shark.jpg",
+    "clicked": false
+  },
+  {
+    "id": 18,
+    "url": "./assets/img/Marx_beauty.jpg",
+    "clicked": false
+  }
+]

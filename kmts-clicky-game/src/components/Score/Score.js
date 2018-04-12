@@ -10,7 +10,7 @@ class Score extends Component {
     ]
   }
     
-  updateScore = (props) => {
+  updateScore = () => {
     const newState = this.state.scores.map((bothScores) => {
       const newScore = bothScores;
       
@@ -26,6 +26,7 @@ class Score extends Component {
     this.setState({
       newState
     })
+    console.log('clicked');
   }
 
   resetScore = (props) => {

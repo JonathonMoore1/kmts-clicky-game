@@ -3,35 +3,19 @@ import Header from './components/Header';
 import ClickImage from './components/ClickImage';
 import Score from './components/Score';
 import Wrapper from './components/Wrapper';
-import images from './components/images.json';
+import images from './images.json';
+
+// vvv Map over the id and url keys from images and push them to an array
+// Try to 'require' them in and save them to variables name `img + [i]`
+//const Img = require("./img/Tiger_Shark_Obamaized.gif");
 
 class App extends Component {
 
   state = {
-    images,
-    score: 0,
-    topScore: 0
+    images
   };
-
-  
-
-  // randomize(id) {
-  //   let img = Array.from(images);
-  //   return img[Math.floor(Math.random() * img.length)];
-  //   console.log(img);
-  // }
-
-  // incrementScore() {
-    
-  // }
   
   render() {
-
-    let scores = {
-      score: 0,
-      topScore: 0
-    }
-
     return (
       <div>
       <nav className="navbar navbar-light bg-light">
@@ -43,10 +27,7 @@ class App extends Component {
         {/* <div>
           <p>Score: {scores.score} | Top Score: {scores.topScore} </p>
         </div> */}
-        <Score 
-          score={scores.score}
-          topScore={scores.topScore}
-        />
+        <Score />
       </nav>
       <Header />
       <Wrapper>
