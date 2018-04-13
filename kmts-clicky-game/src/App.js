@@ -11,18 +11,25 @@ import images from './images.json';
 
 class App extends Component {
 
+  // READ DOCS ON LIFTING UP STATE
+
   state = {
     images
+    // Add score state array
+    // vvvvvvvvvvvvvvvvvvvvv
+
   };
-  
+  // Declare updateScore() to be passed down to Score.js and ClickImage.js
+  // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+
   render() {
     return (
       <div>
       <nav className="navbar navbar-light bg-light">
         <a className="navbar-brand" href="/">
-          <img src={require("./img/sickle-and-hammer.png")} className="d-inline-block align-top mr-2" alt="" />
+          <img src={require("./sickle-and-hammer.png")} className="d-inline-block align-top mr-2" alt="" />
           Karl Marx and Tiger Sharks!
-          <img src={require("./img/shark.png")} className="d-inline-block align-top ml-2" alt="" />
+          <img src={require("./shark.png")} className="d-inline-block align-top ml-2" alt="" />
         </a>
         {/* <div>
           <p>Score: {scores.score} | Top Score: {scores.topScore} </p>
@@ -31,7 +38,9 @@ class App extends Component {
       </nav>
       <Header />
       <Wrapper>
-        {this.state.images.map((image, index) => (
+        {
+          // this.state.images.sort((a, b) => {return Math.random()})
+          this.state.images.map((image, index) => (
           <ClickImage
             key={index}
             id={image.id}
