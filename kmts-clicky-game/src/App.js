@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import Navbar from './components/Navbar';
 import Header from './components/Header';
 import ClickImage from './components/ClickImage';
-import Score from './components/Score';
+// import Score from './components/Score';
 import Wrapper from './components/Wrapper';
 import images from './images.json';
 
@@ -14,38 +15,65 @@ class App extends Component {
   // READ DOCS ON LIFTING UP STATE
 
   state = {
-    images
+    images,
     // Add score state array
     // vvvvvvvvvvvvvvvvvvvvv
-
+    scores: [
+      { score: 0 },
+      { topScore: 0 }
+    ]
   };
   // Declare updateScore() to be passed down to Score.js and ClickImage.js
   // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+  updateScore = () => {
+    const newState = this.state.scores.map((bothScores) => {
+      const newScore = bothScores;
+      
+      if (newScore.score > newScore.topScore) {
+        // newScore.score++;
+        newScore.topScore++;
+      } else {
+        newScore.score++;
+        newScore.topScore++;
+      }
+      return newScore;
+    });
+    this.setState({
+      newState
+    })
+    console.log('clicked');
+  }
+
+  resetScore = () => {
+    const newState = this.state.scores.map((bothScores) => {
+      const newScore = bothScores;
+      newScore.score = 0;
+      return newScore;
+    });
+    this.setState({
+      newState
+    });
+  }
 
   render() {
     return (
       <div>
-      <nav className="navbar navbar-light bg-light">
-        <a className="navbar-brand" href="/">
-          <img src={require("./sickle-and-hammer.png")} className="d-inline-block align-top mr-2" alt="" />
-          Karl Marx and Tiger Sharks!
-          <img src={require("./shark.png")} className="d-inline-block align-top ml-2" alt="" />
-        </a>
-        {/* <div>
-          <p>Score: {scores.score} | Top Score: {scores.topScore} </p>
-        </div> */}
-        <Score />
-      </nav>
+      <Navbar 
+        score={this.state.scores[0].score}
+        topScore={this.state.scores[1].topScore}
+        updateScore={this.updateScore}
+        resetScore={this.resetScore}
+      />
       <Header />
       <Wrapper>
-        {
+        { 
           // this.state.images.sort((a, b) => {return Math.random()})
           this.state.images.map((image, index) => (
           <ClickImage
             key={index}
             id={image.id}
             src={image.url}
-            onClick={Score.updateScore}
+            updateScore={this.updateScore}
           />
         ))}
       </Wrapper>
