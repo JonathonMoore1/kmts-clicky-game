@@ -3,3 +3,8 @@ p {
   font-family: 'Anton', sans-serif;
   margin-left: auto !important;
 }
+
+.app-title {
+  font-size: 2rem;
+  font-family: 'Amatic SC', cursive;
+}

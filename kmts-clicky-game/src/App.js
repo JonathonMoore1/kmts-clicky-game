@@ -54,6 +54,7 @@ class App extends Component {
             key={index}
             id={image.id}
             src={image.url}
+            url={image.url}
             updateScore={this.updateScore}
           />
         ))}
