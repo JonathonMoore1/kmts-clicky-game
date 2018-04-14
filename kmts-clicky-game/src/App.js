@@ -11,6 +11,7 @@ class App extends Component {
   state = {
     images,
     clicked: [],
+    comments: "",
     score: 0,
     topScore: 0
   };
@@ -24,17 +25,37 @@ class App extends Component {
         score: this.state.score + 1
       });
       if (this.state.score >= this.state.topScore) {
-        this.setState({ 
-          topScore: this.state.score + 1
-        });
+        this.setState({ topScore: this.state.score + 1});
       }
     }
     else {
       this.setState({
         score: 0,
-        clicked: []
-      });
+        clicked: [],
+        comments: "You're shark bait!"
+      }, this.resetComments());
     }
+    this.finishGame();
+  }
+
+  finishGame() {
+    if (this.state.score === 18 ) {
+      this.setState({
+        comments: "Well done, comrade! You win!"
+      }).then(() => {
+        this.setState({
+          images,
+          clicked: [],
+          comments: "",
+          score: 0,
+          topScore: 0
+        });
+      })
+    }
+  }
+
+  resetComments() {
+    setTimeout(() => {this.setState({ comments: "" })}, 4000);
   }
 
   render() {
@@ -46,7 +67,7 @@ class App extends Component {
         updateScore={this.updateScore}
         resetScore={this.resetScore}
       />
-      <Header />
+      <Header comments={this.state.comments} />
       <Wrapper>
         {this.state.images.sort(() => 0.5 - Math.random())
           .map((image, index) => (
