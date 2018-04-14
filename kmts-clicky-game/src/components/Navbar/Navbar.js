@@ -10,11 +10,7 @@ const Navbar = (props) => {
         Karl Marx and Tiger Sharks!
         <img src={require("./shark.png")} className="d-inline-block align-top ml-2" alt="" />
       </a>
-      {/* <p>Score: {this.state.scores[0].score} | Top Score: {this.state.scores[1].topScore} </p> */}
       <p>Score: {props.score} | Top Score: {props.topScore} </p>
-      <br />
-      <button onClick={props.updateScore}>TEST SCORE</button>
-      <button onClick={props.resetScore}>TEST RESET</button>
     </nav>
   );
 }
